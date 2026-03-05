@@ -26,6 +26,23 @@
           crossorigin="anonymous">
 </head>
 
+<script>
+        function toggleText(button){
+
+            let description = button.previousElementSibling;
+            let moreText = description.querySelector(".more-text");
+
+            if(moreText.style.display === "inline"){
+                moreText.style.display = "none";
+                button.innerText = "Read more";
+            } else {
+                moreText.style.display = "inline";
+                button.innerText = "Read less";
+            }
+
+        }
+</script>
+
 <body id="contact-body" style="overflow-x: hidden;">
 
     <nav class="nav-desk">
@@ -105,29 +122,54 @@
 
         <div class="career-grid">
 
-            <div class="career-card">
+          <div class="career-card">
                 <span class="career-date">12 Months • 2025 - 2026</span>
                 <strong class="career-title">Front-End Developer Intern</strong>
+
                 <p class="career-description">
-                    As a Front-End Developer Intern at JAG METHOD (Feb 2025 – Jan 2026), you design and develop responsive web interfaces using HTML, CSS, JavaScript, and C# (MVC and Blazor), collaborate with UI/UX teams, build interactive dashboards with API integration, and optimize performance while strengthening your front-end development skills.
+                    <span class="short-text">
+                        As a Front-End Developer Intern at JAG METHOD (Feb 2025 – Jan 2026), you design and develop responsive web interfaces...
+                    </span>
+
+                    <span class="more-text">
+                        using HTML, CSS, JavaScript, and C# (MVC and Blazor), collaborate with UI/UX teams, build interactive dashboards with API integration, and optimize performance while strengthening your front-end development skills.
+                    </span>
                 </p>
+
+                <button class="read-more-btn" onclick="toggleText(this)">Read more</button>
             </div>
 
-            <div class="career-card">
-                <span class="career-date">16 Months • 2022 - 2024</span>
-                <strong class="career-title">Software Development - WeThinkCode</strong>
-                <p class="career-description">
-                    Completed a fully sponsored Software Engineering (NQF 5) program at WeThinkCode in Johannesburg, South Africa (Sept 2022 – Dec 2023), with a focus on full-stack development, gaining experience in Python and Java, Object-Oriented Programming (OOP), Test-Driven Development (TDD), and API development.               
-                 </p>
-               
-            </div>
+                <div class="career-card">
+                    <span class="career-date">16 Months • 2022 - 2024</span>
+                    <strong class="career-title">Software Development - WeThinkCode</strong>
 
+                    <p class="career-description">
+                        <span class="short-text">
+                            Completed a fully sponsored Software Engineering (NQF 5) program at WeThinkCode in Johannesburg, South Africa...
+                        </span>
+
+                        <span class="more-text">
+                            (Sept 2022 – Dec 2023), with a focus on full-stack development, gaining experience in Python and Java, Object-Oriented Programming (OOP), Test-Driven Development (TDD), and API development.
+                        </span>
+                    </p>
+
+                    <button class="read-more-btn" onclick="toggleText(this)">Read more</button>
+                </div>
             <div class="career-card">
                 <span class="career-date">12 Months • 2022</span>
                 <strong class="career-title">End-User Computing Trainer — Sci-Bono Discovery Centre</strong>
+
                 <p class="career-description">
-                    Worked as a Teaching Trainer on contract with Sci-Bono Discovery Centre and Gauteng Department of Education (Mar 2022 – Feb 2023) in Gauteng, South Africa, where you trained primary and high school educators in ICT, Microsoft Office, Microsoft Access, and computer literacy, delivering practical sessions and monitoring progress to strengthen their technical skills.
+                    <span class="short-text">
+                        Worked as a Teaching Trainer on contract with Sci-Bono Discovery Centre and the Gauteng Department of Education...
+                    </span>
+
+                    <span class="more-text">
+                        (Mar 2022 – Feb 2023) in Gauteng, South Africa, where you trained primary and high school educators in ICT, Microsoft Office, Microsoft Access, and computer literacy, delivering practical sessions and monitoring progress to strengthen their technical skills.
+                    </span>
                 </p>
+
+                <button class="read-more-btn" onclick="toggleText(this)">Read more</button>
             </div>
 
             <div class="career-card">
@@ -135,9 +177,18 @@
                 <strong class="career-title">
                     Front-End Web Developer — Sci-Bono Discovery Science Centre
                 </strong>
+
                 <p class="career-description">
-                    Completed a fully sponsored program in website design and development, gaining hands-on experience in creating mock-ups, building static and adaptive web interfaces, developing dynamic UIs, designing contact management systems, managing databases, developing data access layers, and building front-end components for web and mobile applications, including content management features.            
-                    </p>
+                    <span class="short-text">
+                        Completed a fully sponsored program in website design and development, gaining hands-on experience in creating mock-ups and building static and adaptive web interfaces...
+                    </span>
+
+                    <span class="more-text">
+                        developing dynamic UIs, designing contact management systems, managing databases, developing data access layers, and building front-end components for web and mobile applications, including content management features.
+                    </span>
+                </p>
+
+                <button class="read-more-btn" onclick="toggleText(this)">Read more</button>
             </div>
 
         </div>
